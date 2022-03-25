@@ -4,6 +4,7 @@
 // license that can be found in the LICENSE file or at
 // https://developers.google.com/open-source/licenses/bsd
 
+//go:build windows
 // +build windows
 
 package main
@@ -13,7 +14,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/google/cloud-print-connector/lib"
+	"github.com/machship-mm/cloud-print-connector/lib"
 	"github.com/urfave/cli"
 	"golang.org/x/sys/windows/svc"
 	"golang.org/x/sys/windows/svc/eventlog"
@@ -22,11 +23,11 @@ import (
 
 var windowsCommands = []*cli.Command{
 	&cli.Command{
-		Name:      "init",
-		Aliases:   []string{"i"},
-		Usage:     "Create a config file",
-		Action:    initConfigFile,
-		Flags:     commonInitFlags,
+		Name:    "init",
+		Aliases: []string{"i"},
+		Usage:   "Create a config file",
+		Action:  initConfigFile,
+		Flags:   commonInitFlags,
 	},
 	&cli.Command{
 		Name:   "install-event-log",

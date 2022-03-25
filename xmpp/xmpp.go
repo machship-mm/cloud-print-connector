@@ -12,8 +12,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/google/cloud-print-connector/log"
-	"github.com/google/cloud-print-connector/notification"
+	"github.com/machship-mm/cloud-print-connector/log"
+	"github.com/machship-mm/cloud-print-connector/notification"
 )
 
 type PrinterNotificationType uint8

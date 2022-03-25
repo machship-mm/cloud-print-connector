@@ -4,6 +4,7 @@
 // license that can be found in the LICENSE file or at
 // https://developers.google.com/open-source/licenses/bsd
 
+//go:build linux || darwin || freebsd
 // +build linux darwin freebsd
 
 package cups
@@ -26,9 +27,9 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/google/cloud-print-connector/cdd"
-	"github.com/google/cloud-print-connector/lib"
-	"github.com/google/cloud-print-connector/log"
+	"github.com/machship-mm/cloud-print-connector/cdd"
+	"github.com/machship-mm/cloud-print-connector/lib"
+	"github.com/machship-mm/cloud-print-connector/log"
 )
 
 const (

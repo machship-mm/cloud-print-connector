@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/google/cloud-print-connector/lib"
+	"github.com/machship-mm/cloud-print-connector/lib"
 )
 
 // Privet managers local discovery and printing.

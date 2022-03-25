@@ -4,7 +4,7 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 export CONNECTOR_VERSION=$1
-LDFLAGS="github.com/google/cloud-print-connector/lib.BuildDate=$CONNECTOR_VERSION"
+LDFLAGS="github.com/machship-mm/cloud-print-connector/lib.BuildDate=$CONNECTOR_VERSION"
 CONNECTOR_DIR=$GOPATH/src/github.com/google/cloud-print-connector
 
 arch=$(arch)
@@ -17,7 +17,7 @@ fi
 MSI_FILE="$CONNECTOR_DIR/wix/windows-connector-$CONNECTOR_VERSION-$arch.msi"
 
 echo "Running go get..."
-go get -ldflags -X="$LDFLAGS" -v github.com/google/cloud-print-connector/...
+go get -ldflags -X="$LDFLAGS" -v github.com/machship-mm/cloud-print-connector/...
 rc=$?
 if [[ $rc != 0 ]]; then
   echo "Error $rc with go get. Exiting."
